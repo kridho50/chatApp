@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_send"
+        tools:listitem="@layout/item_view"
+        tools:itemCount="5"/>
+
+    <ImageView
+        android:id="@+id/iv_refresh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_baseline_refresh_24"
+        android:layout_alignParentRight="true"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/et_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:maxLines="4"
+            android:hint="Ketik Pesan"
+            android:textSize="14sp"
+            android:background="@drawable/chat_receiver"
+            android:layout_toStartOf="@+id/iv_send"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
